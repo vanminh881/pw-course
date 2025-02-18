@@ -10,8 +10,8 @@
 // a. Khai báo chiều cao của bạn (cm) 
 // b. In ra cân nặng lý tưởng, cân nặng tối đa, cân nặng tối thiểu trên cùng một dòng.
 
-let chieuCaoCuaBan = 170;
-let canNangLyTuong = 70 * 9 / 10;
-let canNangToiDa = 70;
-let canNangToiThieu = 70 * 8 / 10;
-console.log("Cân nặng lý tưởng: " + canNangLyTuong + "kg,", "Cân nặng tối đa: " + canNangToiDa + "kg,", "Cân nặng tối thiểu: " + canNangToiThieu + "kg");
+const height = 170;
+const heightMod = height % 100;
+const perfectHeight = heightMod * 9 / 10;
+const minimumHeight = 70 * 8 / 10;
+console.log("Cân nặng lý tưởng: ${perfectHeight} kg,", "Cân nặng tối đa: ${heightMod} kg,", "Cân nặng tối thiểu: ${minimumHeight} kg");

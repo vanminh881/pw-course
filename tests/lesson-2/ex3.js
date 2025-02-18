@@ -7,9 +7,12 @@
 
 const number1 = -4;
 
-if (number1 > 0)
+if (number1 > 0) {
     console.log("Giá trị bạn nhập là số dương");
-else if (number1 < 0)
+}
+else if (number1 < 0) {
     console.log("Giá trị bạn nhập là số âm");
-else
+}
+else {
     console.log("Giá trị bạn nhập là số 0");
+}
