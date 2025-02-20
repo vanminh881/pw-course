@@ -67,7 +67,7 @@ let/const <ten_object> = {
 ```
 - Trong đó:
 - <thuoc_tinh>: giống quy tắc đặt tênbiến
-- <gia tri>: có kiểu giống biến, hoặc là 1 object khác
+- <gia_tri>: có kiểu giống biến, hoặc là 1 object khác
 ```
 let user = {"name": "Minh, "age": 24, "isSingle": true, "curent address": "Ho Chi Minh city"}
 
