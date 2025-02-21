@@ -61,6 +61,28 @@ function sumArray(numbers) {
 //  Số 0, số 1 không phải số nguyên tố.
 //  Các số nguyên tố là số chỉ chia hết cho 1 và chính nó
 
+let daySo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+let primes = [];
+
+function isPrime(number) {
+    if (number === 0 && number === 1) return false; // Số nhỏ hơn 2 không phải là số nguyên tố
+    for (let i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i === 0) {
+            return false; // Nếu chia hết cho số nào thì không phải số nguyên tố
+        }
+    }
+    return true; // Nếu không chia hết cho số nào thì là số nguyên tố
+}
+
+for (let i = 0; i < daySo.length; i++) {
+    let number = daySo[i];
+    if (isPrime(number)) {
+        primes.push(number); // Thêm số nguyên tố vào mảng primes
+    }
+}
+
+console.log(`Dãy số nguyên tố: ${primes}`);
+
 //5. Tạo một function để cập nhật email cho người dùng trong một danh sách, dựa trên tên
 // người dùng.
 // Đoạn code giả mã (pseudo code) như sau:
