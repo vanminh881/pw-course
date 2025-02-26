@@ -145,7 +145,7 @@ let product = {
 
 for (let property in product) {
     console.log(property) // Banana Apple Orange
-    console.log(product["property]) // Banana 10 Apple 20 Orange 15
+    console.log(product["property"]) // Banana 10 Apple 20 Orange 15
 }
 ```
 
@@ -153,9 +153,10 @@ for (let property in product) {
 - Cú pháp:
 
 ```
-foreach(<phần tử>, index) {
+foreach((<phần tử>, index) => {
     // code
 }
+)
 ```
 
 ```
