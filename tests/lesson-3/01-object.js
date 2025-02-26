@@ -53,8 +53,7 @@ settings['volume'] = 500;
 console.log(settings.volume);
 
 //6. Tạo một object bike và sau đó thêm thuộc tính color vào object đó
-const bike = {
-}
+const bike = {};
 bike['color'] = "Silver";
 
 //7. Tạo một object employee với các thuộc tính: name, age và xóa thuộc tính age khỏi object này

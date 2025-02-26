@@ -65,7 +65,7 @@ let daySo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 let primes = [];
 
 function isPrime(number) {
-    if (number === 0 && number === 1) return false; // Số nhỏ hơn 2 không phải là số nguyên tố
+    if (number === 0 || number === 1) return false; // Số nhỏ hơn 2 không phải là số nguyên tố
     for (let i = 2; i <= Math.sqrt(number); i++) {
         if (number % i === 0) {
             return false; // Nếu chia hết cho số nào thì không phải số nguyên tố
@@ -101,11 +101,12 @@ function updateEmail(name, newEmail) {
 
     for (let i = 0; i < users.length; i++) {
         if (users[i].name === name) {
-            users[i].email = newEmail;
+            users[i].email === newEmail;
             console.log(`Cập nhật email thành công cho ${name}: ${newEmail}`);
             return;
         }
     }
+    console.log(`Cập nhật email không thành công`);
 }
 
 // 6. Viết một hàm tính điểm trung bình của các sinh viên dựa trên điểm số lưu trong một
@@ -150,7 +151,10 @@ function areAllProductsPricedGreaterThanZero(cart) {
 // mở cửa từ 9 giờ sáng đến 9 giờ tối
 
 function isStoreOpen(hour) {
-    if (hour >= 9 && hour < 21) {
+    if (hour < 0 || hour > 24) {
+        return false;
+    }
+    else if (hour >= 9 && hour < 21) {
         return "Mở cửa";
     } else {
         return "Đóng cửa";
@@ -161,7 +165,9 @@ function isStoreOpen(hour) {
 // tuổi miễn phí, người lớn từ 18 tuổi trở lên là 100k, và trẻ em từ 6 đến 17 tuổi là 50k
 
 function getTicketPrice(age) {
-    if (age < 5) {
+    if (age < 0) {
+        return false;
+    } else if (age < 5) {
         return "Miễn phí";
     } else if (age >= 18) {
         console.log("Mức giá vé: 100k");
@@ -221,7 +227,9 @@ function getMonthName(monthNumber) {
 //     6.5 và < 8), trung bình (>= 5 và < 6.5), yếu (< 5)
 
 function classifyGrade(diem) {
-    if (diem >= 8) {
+    if (diem <0) {
+        return false;
+    } else if (diem >= 8) {
         console.log("Giỏi");
     } else if (diem >= 6.5) {
         console.log("Khá");
