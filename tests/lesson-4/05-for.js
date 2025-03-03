@@ -26,7 +26,7 @@ let sum2 = 0;
 
 for (property in objectStudent2) {
 
-    if (typeof objectStudent2[property] === 'number' && typeof objectStudent2[property] !== 'number') {
+    if (typeof objectStudent2[property] === 'number') {
         sum2 += objectStudent2[property];
     }
 }
